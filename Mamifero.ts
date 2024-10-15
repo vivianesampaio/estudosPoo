@@ -1,18 +1,14 @@
 class Mamifero {
-    especie: string = "";
-    nome: string = "";
-    peso: number = 0;
-    cor: string = "";
-
-    constructor(nome: string){
-        this.nome = nome;
-        this.peso = 60;
-    }
+    constructor(
+        public nome: string,
+        public peso: number,
+        public especie: string,
+        public cor: string
+    ){}
 }
 
-let meg: Mamifero;
-meg = new Mamifero('Meg')
-meg.especie = 'Cachorro'
-meg.peso = 13
-meg.cor = 'Caramelo';
-console.log(meg)
+let meg = new Mamifero('Meg', 13, 'Cachorro', 'Caramelo');
+let guga = new Mamifero('Guga', 13, 'Cachorro', 'Caramelo');
+
+
+console.log(meg.nome,meg.especie)
